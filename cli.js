@@ -3,6 +3,7 @@
 import { Command } from 'commander';
 import { getOAuth2Client } from './auth/login.js';
 import{showAllCommands} from './commands/commands.js';
+import{listEmails} from './commands/list.js';
 
 const program = new Command();
 
@@ -32,5 +33,11 @@ program
   .command('cmd')
   .description('List all the commands')
   .action(showAllCommands)
+
+  program
+  .command('list')
+  .description('List recent mails')
+  .action(listEmails)
+
 
 program.parse();

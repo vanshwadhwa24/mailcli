@@ -5,6 +5,7 @@ import { getOAuth2Client } from './auth/login.js';
 import{showAllCommands} from './commands/commands.js';
 import{listEmails} from './commands/list.js';
 import { showInbox } from './commands/inbox.js';
+import { composeEmail } from './commands/compose.js';
 
 const program = new Command();
 
@@ -44,6 +45,11 @@ program
   .command('inbox')
   .description('Open your inbox')
   .action(showInbox)
+  
+  program
+  .command('compose')
+  .description('Write an email')
+  .action(composeEmail)
 
 
 program.parse();

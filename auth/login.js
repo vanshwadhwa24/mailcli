@@ -38,10 +38,7 @@ export async function getOAuth2Client() {
 
 // Handles user login and token exchange
 async function getNewToken(oAuth2Client) {
-  const SCOPES = [
-    'https://www.googleapis.com/auth/gmail.readonly',
-    // Add more scopes later (send, draft, etc.)
-  ];
+ const SCOPES = ['https://mail.google.com/'];
 
   const authUrl = oAuth2Client.generateAuthUrl({
     access_type: 'offline',

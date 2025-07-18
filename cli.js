@@ -2,6 +2,7 @@
 
 import { Command } from 'commander';
 import { getOAuth2Client } from './auth/login.js';
+import{showAllCommands} from './commands/commands.js';
 
 const program = new Command();
 
@@ -26,5 +27,10 @@ program
     const auth = await getOAuth2Client();
     console.log(' Auth success:', !!auth);
   });
+
+  program
+  .command('cmd')
+  .description('List all the commands')
+  .action(showAllCommands)
 
 program.parse();

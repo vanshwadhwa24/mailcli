@@ -4,6 +4,7 @@ import { Command } from 'commander';
 import { getOAuth2Client } from './auth/login.js';
 import{showAllCommands} from './commands/commands.js';
 import{listEmails} from './commands/list.js';
+import { showInbox } from './commands/inbox.js';
 
 const program = new Command();
 
@@ -38,6 +39,11 @@ program
   .command('list')
   .description('List recent mails')
   .action(listEmails)
+  
+  program 
+  .command('inbox')
+  .description('Open your inbox')
+  .action(showInbox)
 
 
 program.parse();

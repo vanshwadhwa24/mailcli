@@ -1,0 +1,10 @@
+# Secrets and sensitive data
+.env
+auth/token.json
+
+# Dependencies
+node_modules/
+
+# OS or editor files
+.DS_Store
+*.log

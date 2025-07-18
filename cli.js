@@ -7,6 +7,7 @@ import{listEmails} from './commands/list.js';
 import { showInbox } from './commands/inbox.js';
 import { composeEmail } from './commands/compose.js';
 import bat from './commands/bat.js'
+import { runDoctor } from './commands/doctor.js';
 
 const program = new Command();
 
@@ -56,6 +57,11 @@ program
   .command('bat')
   .description(`I'm Batman`)
   .action(bat)
+
+  program
+   .command('doctor')
+  .description('Run setup diagnostics and check your config')
+  .action(runDoctor);
 
 
 program.parse();

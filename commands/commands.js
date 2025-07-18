@@ -8,6 +8,7 @@ export function showAllCommands() {
 
   console.log(`${chalk.yellow('mailcli cmd')}       → Show all available commands`);
   console.log(`${chalk.yellow('mailcli --help')}    → Ask for help`);
+  console.log(`${chalk.yellow('mailcli doctor')}    → Run diagonastic `);
   console.log(`${chalk.yellow('mailcli --version')} → Check current version of mailcli`);
   console.log(`${chalk.yellow('mailcli list')}      → List your recent emails`);
   console.log(`${chalk.yellow('mailcli inbox')}      → Open inbox and read mails`);

@@ -26,9 +26,11 @@
     "chalk": "^5.4.1",
     "commander": "^14.0.0",
     "dotenv": "^17.2.0",
+    "enquirer": "^2.4.1",
     "googleapis": "^153.0.0",
     "inquirer": "^12.7.0",
     "open": "^10.2.0",
-    "ora": "^8.2.0"
+    "ora": "^8.2.0",
+    "striptags": "^3.2.0"
   }
 }

@@ -72,7 +72,7 @@ Making sure your message is clear and clean before sending.
 
 Want to be part of private testing or help improve the tool?
 
-📫 Send a mail to: vansh.dev.inbox@gmail.com
+📫 Send a mail to: vanshreads@gmail.com
 Mention you'd like to join as a test user—I'll hook you up.
 
 ---

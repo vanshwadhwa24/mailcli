@@ -94,10 +94,3 @@ MIT License
 
 ⚡ Quick Demo (Coming Soon)
 
->>>>>>> 18918b2d095c760ff609dc84b9a425b1bb88dfdc
->>>>>>>
->>>>>>
->>>>>
->>>>
->>>
->>

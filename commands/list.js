@@ -24,7 +24,7 @@ export async function listEmails() {
       return;
     }
 
-    spinner.succeed(`📨 You have ${messages.length} recent emails:\n`);
+    spinner.succeed(` You have ${messages.length} recent emails:\n`);
 
     let count = 1;
 

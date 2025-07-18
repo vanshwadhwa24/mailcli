@@ -7,7 +7,8 @@
     "mailcli": "./cli.js"
   },
   "scripts": {
-    "start": "node cli.js"
+    "start": "node cli.js",
+    "postinstall": "node ./postinstall.js"
   },
   "keywords": [
     "gmail",

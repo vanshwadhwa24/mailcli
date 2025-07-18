@@ -24,7 +24,7 @@ export async function showInbox() {
       return;
     }
 
-    spinner.succeed(`📬 Inbox loaded! Select a message to read:\n`);
+    spinner.succeed(` Inbox loaded! Select a message to read:\n`);
 
     const fullEmails = await Promise.all(
   messages.map((msg) =>
@@ -56,7 +56,7 @@ const emailChoices = fullEmails.map(({ data }, index) => {
       {
         type: 'list',
         name: 'selectedId',
-        message: chalk.green('📖 Select an email to view:'),
+        message: chalk.green(' Select an email to view:'),
         choices: emailChoices,
         pageSize: 10,
       },

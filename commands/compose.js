@@ -6,34 +6,34 @@ import { getOAuth2Client } from '../auth/login.js';
 import { encode } from 'js-base64';
 
 export async function composeEmail() {
-  console.log(chalk.cyan('\n💌 Let’s compose your email!\n'));
+  console.log(chalk.cyan('\nLet’s compose your email!\n'));
 
   const questions = [
     {
       type: 'input',
       name: 'to',
-      message: '📨 Send To:',
+      message: ' Send To:',
       validate: (input) => input.includes('@') || 'Please enter a valid email address',
     },
     {
       type: 'input',
       name: 'subject',
-      message: '✏️ Subject:',
+      message: ' Subject:',
     },
     {
       type: 'input',
       name: 'cc',
-      message: '📋 CC (comma-separated, optional):',
+      message: 'CC (comma-separated, optional):',
     },
     {
       type: 'input',
       name: 'bcc',
-      message: '🔒 BCC (comma-separated, optional):',
+      message: ' BCC (comma-separated, optional):',
     },
     {
       type: 'editor',
       name: 'body',
-      message: '📝 Body (your default editor will open):',
+      message: ' Body (your default editor will open):',
       validate: (input) => input.trim().length > 0 || 'Body cannot be empty.',
     },
   ];
@@ -65,8 +65,8 @@ export async function composeEmail() {
       },
     });
 
-    spinner.succeed('✅ Email sent successfully!');
+    spinner.succeed('Email sent successfully!');
   } catch (error) {
-    console.error(chalk.red('❌ Failed to send email:'), error.message);
+    console.error(chalk.red('Failed to send email:'), error.message);
   }
 }

@@ -56,7 +56,7 @@ async function getNewToken(oAuth2Client) {
   await fs.mkdir(path.dirname(TOKEN_PATH), { recursive: true });
   await fs.writeFile(TOKEN_PATH, JSON.stringify(tokens, null, 2));
 
-  console.log('✅ Token stored to', TOKEN_PATH);
+  console.log(' Token stored to', TOKEN_PATH);
   return oAuth2Client;
 }
 
@@ -69,11 +69,11 @@ function listenForAuthCode() {
         const code = url.searchParams.get('code');
 
         if (code) {
-          res.end('✅ Authentication successful! You can close this tab.');
+          res.end(' Authentication successful! You can close this tab.');
           server.close();
           resolve(code);
         } else {
-          res.end('❌ No code found.');
+          res.end(' No code found.');
           reject(new Error('No code in URL.'));
         }
       } catch (err) {
@@ -83,10 +83,10 @@ function listenForAuthCode() {
 
     server.listen(3000)
       .on('listening', () => {
-        console.log('🛰️  Waiting for authentication at http://localhost:3000...');
+        console.log(' Waiting for authentication at http://localhost:3000...');
       })
       .on('error', (err) => {
-        console.error('❌ Failed to start auth server:', err.message);
+        console.error(' Failed to start auth server:', err.message);
         reject(err);
       });
   });
